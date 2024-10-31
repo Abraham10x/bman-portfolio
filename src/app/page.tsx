@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+const Home = () => {
   const tools = [
     {
       id: 1,
@@ -350,4 +350,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;
