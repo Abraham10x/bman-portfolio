@@ -59,7 +59,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="container pt-10 sm:pt-14 px-5 sm:px-10 pb-8 mx-auto">
+    <div className="xl:container pt-10 sm:pt-14 px-5 sm:px-10 pb-8 mx-auto">
       <h3 className="font-bold text-xl sm:text-2xl lg:text-4xl">Projects</h3>
       <div className="my-20 grid grid-cols-1 sm:grid-cols-2 gap-20">
         {projects.map((item) => (

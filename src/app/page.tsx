@@ -1,5 +1,11 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const Home = () => {
   const tools = [
@@ -144,9 +150,48 @@ const Home = () => {
     },
   ];
 
+  const reviews = [
+    {
+      id: 1,
+      name: "Samson Samuels",
+      jobTitle: "Co-founder Hashtag Digital",
+      profile: "/assets/home/review/image/samson.png",
+      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation`,
+    },
+    {
+      id: 2,
+      name: "Jennifer Obayuwana",
+      jobTitle: "Executive Director Polo Limited",
+      profile: "/assets/home/review/image/jenny.png",
+      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation`,
+    },
+    {
+      id: 3,
+      name: "Akintade Bright",
+      jobTitle: "CEO Partycoo",
+      profile: "/assets/home/review/image/tade.png",
+      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation`,
+    },
+    {
+      id: 4,
+      name: "Akintade Bright",
+      jobTitle: "CEO Partycoo",
+      profile: "/assets/home/review/image/tade.png",
+      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation`,
+    },
+  ];
+
   return (
     <div>
-      <div className="container pt-10 sm:pt-14 px-5 sm:px-10 pb-8 mx-auto">
+      <div className="xl:container pt-10 sm:pt-14 px-5 sm:px-10 pb-8 mx-auto">
         <div className="flex flex-col lg:flex-row justify-between bg-secondary-600 gap-y-24 gap-x-14 lg:py-12 rounded-3xl relative">
           <div className="flex flex-col justify-between h-full basis-[50%] my-auto pt-10 lg:pt-0 gap-4 lg:gap-8">
             <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl mt-3 text-secondary">
@@ -297,50 +342,84 @@ const Home = () => {
             ))}
           </div>
         </div>
+      </div>
 
-        <div className="flex flex-col gap-8 mt-36">
-          <h3 className="text-center text-xl tracking-widest uppercase">
-            what people are saying
-          </h3>
-          <div className="relative rounded-xl shadow-gray-300 shadow-lg flex flex-col gap-5 pt-10 pb-5 px-8 mt-24">
-            <div
-              className={`absolute -top-10 left-8 bg-black rounded-full p-5`}
-            >
-              <Image
-                className="m-auto"
-                src="/assets/home/review/yellow-quote.svg"
-                alt="quote icon"
-                width={20}
-                height={20}
-              />
-            </div>
-            <p className="text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation
-            </p>
-            <div className="border-t border-black w-full" />
-            <div className="flex flex-row gap-4 items-center">
-              <Image
-                className="rounded-full"
-                src="/assets/home/review/jenny.png"
-                alt="jenny photo"
-                width={90}
-                height={90}
-              />
-              <div className="flex flex-col gap-1">
-                <p className="font-bold text-xl">Jennifer Obayuwana</p>
-                <p className="text-sm">Executive Director Polo Limited</p>
-                <Image
-                  src="/assets/home/review/stars.svg"
-                  alt="stars icon"
-                  width={130}
-                  height={130}
-                />
+      <div className="flex flex-col gap-8 mt-36">
+        <h3 className="text-center text-xl tracking-widest uppercase">
+          what people are saying
+        </h3>
+
+        <Swiper
+          navigation={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+          modules={[Navigation, Pagination, Autoplay]}
+          className="mySwiper w-full py-14"
+        >
+          {reviews.map((data) => (
+            <SwiperSlide key={data.id} className="h-auto">
+              <div className="relative rounded-xl shadow-gray-300 shadow-lg flex flex-col gap-5 pt-10 pb-5 px-8 mt-24">
+                <div
+                  className={`absolute -top-10 left-8 ${
+                    data.id % 2 === 0 ? "bg-black" : "bg-primary"
+                  } rounded-full p-5`}
+                >
+                  <Image
+                    className="m-auto"
+                    src={
+                      data.id % 2 === 0
+                        ? "/assets/home/review/yellow-quote.svg"
+                        : "/assets/home/review/black-quote.svg"
+                    }
+                    alt="quote icon"
+                    width={20}
+                    height={20}
+                  />
+                </div>
+                <p className="text-sm">{data.review}</p>
+                <div className="border-t border-black w-full" />
+                <div className="flex flex-row gap-4 items-center">
+                  <Image
+                    className="rounded-full"
+                    src={data.profile}
+                    alt={`${data.name} photo`}
+                    width={90}
+                    height={90}
+                  />
+                  <div className="flex flex-col gap-1">
+                    <p className="font-bold text-xl">{data.name}</p>
+                    <p className="text-sm">{data.jobTitle}</p>
+                    <Image
+                      src="/assets/home/review/stars.svg"
+                      alt="stars icon"
+                      width={130}
+                      height={130}
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       <div className="bg-primary flex justify-center py-10 my-24">
