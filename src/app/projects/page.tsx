@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Projects = () => {
   const projects = [
     {
@@ -5,56 +7,56 @@ const Projects = () => {
       title: "Hashtag Digital",
       body: "ebsite UI/UX tRedesign",
       bg: "/assets/projects/hashtag.png",
-      link: "",
+      link: "/projects/hashtag",
     },
     {
       id: 2,
       title: "Partycoo",
       body: "Product Design UI/UX",
       bg: "/assets/projects/partycoo.png",
-      link: "",
+      link: "/projects/partycoo",
     },
     {
       id: 3,
       title: "Swarovski",
       body: "Project Designs",
       bg: "/assets/projects/swarovski.png",
-      link: "",
+      link: "/projects/swarovski",
     },
     {
       id: 4,
       title: "Montblanc",
       body: "Project Designs",
       bg: "/assets/projects/montblanc.png",
-      link: "",
+      link: "/projects/montblanc",
     },
     {
       id: 5,
       title: "Polo Limited",
       body: "Project Designs",
       bg: "/assets/projects/polo.png",
-      link: "",
+      link: "/projects/polo-limited",
     },
     {
       id: 6,
       title: "Polo Avenue",
       body: "Project Designs",
       bg: "/assets/projects/polo-avenue.png",
-      link: "",
+      link: "/projects/polo-avenue",
     },
     {
       id: 7,
       title: "Branding",
       body: "Digital Branding and Prints",
       bg: "/assets/projects/branding.png",
-      link: "",
+      link: "/projects/branding",
     },
     {
       id: 8,
       title: "Logos",
       body: "Company Logo Design",
       bg: "/assets/projects/logo.png",
-      link: "",
+      link: "/projects/logo",
     },
   ];
 
@@ -75,9 +77,11 @@ const Projects = () => {
                 </p>
                 <p className="text-white text-xl">{item.body}</p>
               </div>
-              <button className="rounded-lg border border-primary px-4 py-2 text-xl uppercase font-medium text-white">
-                view project
-              </button>
+              <Link legacyBehavior href={item.link}>
+                <button className="rounded-lg border border-primary px-4 py-2 text-xl uppercase font-medium text-white">
+                  view project
+                </button>
+              </Link>
             </div>
           </div>
         ))}
