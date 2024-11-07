@@ -69,7 +69,7 @@ const Header: FC = () => {
             </Link>
           </li>
           <li className="lg:ml-0 xl:ml-8 text-xl md:my-8 sm:my-0 my-7">
-            <Link legacyBehavior href="#contact-us">
+            <Link legacyBehavior href="/contact">
               <a className="md:px-6 lg:px-3 hover:text-secondary duration-500 text-base lg:text-lg">
                 Contact
               </a>
