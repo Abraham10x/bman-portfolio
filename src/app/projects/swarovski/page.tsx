@@ -1,3 +1,4 @@
+import Title from "@/components/projects/Title";
 import Image from "next/image";
 
 const page = () => {
@@ -15,12 +16,8 @@ const page = () => {
   ];
   return (
     <div className="xl:container pt-10 sm:pt-14 px-5 sm:px-10 mx-auto">
-      <div className="flex flex-col gap-2 pb-32">
-        <p>Projects</p>
-        <h3 className="font-bold text-xl sm:text-2xl lg:text-4xl">Swarovski</h3>
-        <div className="rounded-xl border-2 border-primary w-28 mt-2" />
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <Title header="Swarovski" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-32">
         {designs.map((item, index) => (
           <Image
             className={`${

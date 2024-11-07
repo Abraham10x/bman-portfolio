@@ -1,16 +1,11 @@
+import Title from "@/components/projects/Title";
 import Image from "next/image";
 
 const page = () => {
   return (
     <div>
       <div className="xl:container pt-10 sm:pt-14 px-5 pb-36 sm:px-10 mx-auto">
-        <div className="flex flex-col gap-2">
-          <p>Projects</p>
-          <h3 className="font-bold text-xl sm:text-2xl lg:text-4xl">
-            Partycoo
-          </h3>
-          <div className="rounded-xl border-2 border-primary w-28 mt-2" />
-        </div>
+        <Title header="Partycoo" />
       </div>
       <Image
         className="w-full"
