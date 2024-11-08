@@ -136,6 +136,23 @@ body {
   width: 10px;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fde92b;
+  border-radius: 10px;
+  width: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /* Add to your global CSS file */
 /* Add to your global CSS file */
 .testimonial-swiper {
