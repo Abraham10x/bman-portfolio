@@ -135,3 +135,35 @@ body {
 ::-webkit-scrollbar {
   width: 10px;
 }
+
+/* Add to your global CSS file */
+/* Add to your global CSS file */
+.testimonial-swiper {
+  position: relative;
+  padding-bottom: 3rem !important;
+}
+
+.testimonial-swiper .swiper-pagination {
+  position: absolute;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+}
+
+.testimonial-swiper .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  margin: 0 4px;
+  background-color: #d9d9d9;
+  opacity: 0.2;
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #fde92b;
+}
+
+.testimonial-swiper .swiper-wrapper {
+  padding: 20px 0;
+}

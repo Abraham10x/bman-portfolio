@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 const Home = () => {
   const tools = [
@@ -187,143 +187,188 @@ const Home = () => {
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
         enim ad minim veniam, quis nostrud exercitation`,
     },
+    {
+      id: 5,
+      name: "Jennifer Obayuwana",
+      jobTitle: "Executive Director Polo Limited",
+      profile: "/assets/home/review/image/jenny.png",
+      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation`,
+    },
+    {
+      id: 6,
+      name: "Samson Samuels",
+      jobTitle: "Co-founder Hashtag Digital",
+      profile: "/assets/home/review/image/samson.png",
+      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation`,
+    },
   ];
 
   return (
     <div>
-      <div className="xl:container pt-10 sm:pt-14 px-5 sm:px-10 pb-8 mx-auto">
-        <div className="flex flex-col lg:flex-row justify-between bg-secondary-600 gap-y-24 gap-x-14 lg:py-12 rounded-3xl relative">
-          <div className="flex flex-col justify-between h-full basis-[50%] my-auto pt-10 lg:pt-0 gap-4 lg:gap-8">
-            <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl mt-3 text-secondary">
-              Hello, I’m Kingsley O. Mbilitem
-            </h1>
-            <p className="font-medium text-base sm:text-lg lg:text-xl">
-              Creative Designer | Product Designer | UI/UX Designer
-            </p>
-            <p className="text-base text-black">
-              I can help you create stunning products and visuals. As someone
-              who has worked in Tech Industry, Marketing and Graphic Design
-              field for over a decade, I know how to create design solutions to
-              problems and to capture their users’ attention for a better
-              experience.
-            </p>
-            <div className="flex sm:flex-row mt-4 gap-6">
-              <Link href="/resume.pdf" legacyBehavior>
-                <a
-                  rel="noreferer noopener"
-                  target="_blank"
-                  type="application/pdf"
-                >
-                  <button className="bg-primary hover:bg-yellow-200 hover:scale-110 transition delay-150 duration-300 ease-in-out font-bold px-8 sm:px-11 py-5 leading-7 text-lg sm:text-xl rounded-lg shadow-primary/80 shadow-lg">
-                    View Portfolio
-                  </button>
-                </a>
-              </Link>
+      <div className="relative">
+        <div className="xl:container pt-10 px-5 sm:px-10 pb-8 mx-auto">
+          <div className="flex flex-col lg:flex-row justify-between bg-secondary-600 gap-y-24 gap-x-14 lg:py-12 rounded-3xl">
+            <div className="flex flex-col justify-between h-full basis-[50%] my-auto pt-10 lg:pt-0 gap-4 lg:gap-8">
+              <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl mt-3 text-secondary">
+                Hello, I’m Kingsley O. Mbilitem
+              </h1>
+              <p className="font-medium text-base sm:text-lg lg:text-xl">
+                Creative Designer | Product Designer | UI/UX Designer
+              </p>
+              <p className="text-base text-black">
+                I can help you create stunning products and visuals. As someone
+                who has worked in Tech Industry, Marketing and Graphic Design
+                field for over a decade, I know how to create design solutions
+                to problems and to capture their users’ attention for a better
+                experience.
+              </p>
+              <div className="flex sm:flex-row mt-4 gap-6">
+                <Link href="/resume.pdf" legacyBehavior>
+                  <a
+                    rel="noreferer noopener"
+                    target="_blank"
+                    type="application/pdf"
+                  >
+                    <button className="bg-primary hover:bg-yellow-200 hover:scale-110 transition delay-150 duration-300 ease-in-out font-bold px-8 sm:px-11 py-5 leading-7 text-lg sm:text-xl rounded-lg shadow-primary/80 shadow-lg">
+                      View Portfolio
+                    </button>
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <div className="basis-[50%] flex justify-center lg:justify-end">
+              <div>
+                <Image
+                  className="basis-full lg:basis-[20%] sm:mx-auto lg:mx-0"
+                  src="/assets/home/profile.png"
+                  alt="Kingsley O. Mbilitem"
+                  width={600}
+                  height={600}
+                />
+              </div>
             </div>
           </div>
-          <div className="relative basis-[50%] flex justify-center lg:justify-end">
-            <div>
-              <Image
-                className="basis-full lg:basis-[20%] sm:mx-auto lg:mx-0"
-                src="/assets/home/profile.png"
-                alt="Kingsley O. Mbilitem"
-                width={600}
-                height={600}
-              />
-            </div>
-          </div>
-        </div>
+          <Image
+            className="absolute bottom-1/3 lg:top-10 right-0 -z-50 w-3/5 sm:w-auto"
+            alt="fancy image"
+            src="/assets/fancy/dots.svg"
+            width={450}
+            height={450}
+          />
 
-        <div className="flex flex-col gap-8 items-center">
-          <h3 className="text-center text-xl tracking-widest uppercase">
-            Design Tools
-          </h3>
-          <div className="flex flex-row gap-10 items-center">
-            {tools.map((item) => (
-              <Image
-                key={item.id}
-                src={item.img}
-                alt={item.title}
-                width={item.width}
-                height={item.height}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-8 items-center my-32">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col mt-8 sm:mt-0 gap-8 items-center">
             <h3 className="text-center text-xl tracking-widest uppercase">
-              What i do
+              Design Tools
             </h3>
-            <h3 className="font-bold text-center text-xl sm:text-2xl lg:text-4xl">
-              My Expertise
-            </h3>
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-6 items-center justify-center">
+              {tools.map((item) => (
+                <Image
+                  key={item.id}
+                  src={item.img}
+                  alt={item.title}
+                  width={item.width}
+                  height={item.height}
+                />
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 my-8">
-            {skills.map((item) => (
-              <div
-                key={item.id}
-                className={`rounded-xl flex flex-col items-center text-center gap-4 py-8 px-6 ${
-                  item.id % 2 === 0
-                    ? "bg-white shadow-gray-200"
-                    : "bg-primary shadow-yellow-200"
-                } shadow-lg`}
-              >
-                <Image src={item.icon} alt={item.alt} width={60} height={60} />
-                <p className="font-bold text-xl">{item.title}</p>
-                <div className="border-2 border-black rounded-xl w-16" />
-                <p className="text-sm lg:px-10">{item.body}</p>
-              </div>
-            ))}
-          </div>
+        </div>
+      </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 justify-center w-full">
-            <div className="flex gap-3 justify-center">
-              <Image
-                src="/assets/home/skills/stats/award.svg"
-                alt="badge"
-                width={100}
-                height={100}
-              />
-              <div className="flex flex-col gap-2">
-                <p className="text-6xl">10</p>
-                <p className="text-[#818181] uppercase text-sm">
-                  years of <br /> experience
-                </p>
-              </div>
+      <div className="relative">
+        <Image
+          className="absolute -top-[5%] sm:-top-[20%] lg:-top-[45%] xl:-top-[90%] right-0 left-0 w-full -z-50"
+          alt="fancy image"
+          src="/assets/fancy/three-lines.svg"
+          width={20}
+          height={20}
+        />
+        <div className="xl:container px-5 sm:px-10 mx-auto">
+          <div className="flex flex-col gap-8 items-center my-32">
+            <div className="flex flex-col gap-3">
+              <h3 className="text-center text-xl tracking-widest uppercase">
+                What i do
+              </h3>
+              <h3 className="font-bold text-center text-xl sm:text-2xl lg:text-4xl">
+                My Expertise
+              </h3>
             </div>
-            <div className="flex gap-3 justify-center">
-              <Image
-                src="/assets/home/skills/stats/coffee.svg"
-                alt="badge"
-                width={100}
-                height={100}
-              />
-              <div className="flex flex-col gap-2">
-                <p className="text-6xl">1,250</p>
-                <p className="text-[#818181] uppercase text-sm">
-                  completed <br /> projects
-                </p>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 my-8">
+              {skills.map((item) => (
+                <div
+                  key={item.id}
+                  className={`rounded-xl flex flex-col items-center text-center gap-4 py-8 px-6 ${
+                    item.id % 2 === 0
+                      ? "bg-white shadow-gray-200"
+                      : "bg-primary shadow-yellow-200"
+                  } shadow-lg`}
+                >
+                  <Image
+                    src={item.icon}
+                    alt={item.alt}
+                    width={60}
+                    height={60}
+                  />
+                  <p className="font-bold text-xl">{item.title}</p>
+                  <div className="border-2 border-black rounded-xl w-16" />
+                  <p className="text-sm lg:px-10">{item.body}</p>
+                </div>
+              ))}
             </div>
-            <div className="flex gap-3 justify-center">
-              <Image
-                src="/assets/home/skills/stats/smile.svg"
-                alt="badge"
-                width={100}
-                height={100}
-              />
-              <div className="flex flex-col gap-2">
-                <p className="text-6xl">2,000+</p>
-                <p className="text-[#818181] uppercase text-sm">
-                  satisfied <br /> clients
-                </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 gap-8 justify-center items-center w-full">
+              <div className="flex gap-3 justify-center">
+                <Image
+                  src="/assets/home/skills/stats/award.svg"
+                  alt="badge"
+                  width={100}
+                  height={100}
+                />
+                <div className="flex flex-col gap-2">
+                  <p className="text-6xl">10</p>
+                  <p className="text-[#818181] uppercase text-sm">
+                    years of <br /> experience
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-3 justify-center">
+                <Image
+                  src="/assets/home/skills/stats/coffee.svg"
+                  alt="badge"
+                  width={100}
+                  height={100}
+                />
+                <div className="flex flex-col gap-2">
+                  <p className="text-6xl">1,250</p>
+                  <p className="text-[#818181] uppercase text-sm">
+                    completed <br /> projects
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-3 justify-center">
+                <Image
+                  src="/assets/home/skills/stats/smile.svg"
+                  alt="badge"
+                  width={100}
+                  height={100}
+                />
+                <div className="flex flex-col gap-2">
+                  <p className="text-6xl">2,000+</p>
+                  <p className="text-[#818181] uppercase text-sm">
+                    satisfied <br /> clients
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
+      <div className="xl:container px-5 sm:px-10 mx-auto">
         <div className="flex flex-col gap-4 my-12">
           <h3 className="text-center text-xl tracking-widest uppercase">
             worked with:
@@ -344,82 +389,106 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-8 mt-36">
-        <h3 className="text-center text-xl tracking-widest uppercase">
-          what people are saying
-        </h3>
+      <div className="relative">
+        <Image
+          className="absolute top-0 left-0 -z-50"
+          alt="fancy image"
+          src="/assets/fancy/small-dots.svg"
+          width={300}
+          height={300}
+        />
+        <Image
+          className="hidden sm:block absolute -top-[20%] right-0 -z-50"
+          alt="fancy image"
+          src="/assets/fancy/circles.svg"
+          width={350}
+          height={350}
+        />
+        <div className="flex flex-col gap-8 mt-36 relative z-40">
+          <h3 className="text-center text-xl tracking-widest uppercase">
+            what people are saying
+          </h3>
 
-        <Swiper
-          navigation={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-          }}
-          modules={[Navigation, Pagination, Autoplay]}
-          className="mySwiper w-full py-14"
-        >
-          {reviews.map((data) => (
-            <SwiperSlide key={data.id} className="h-auto">
-              <div className="relative rounded-xl shadow-gray-300 shadow-lg flex flex-col gap-5 pt-10 pb-5 px-8 mt-24">
-                <div
-                  className={`absolute -top-10 left-8 ${
-                    data.id % 2 === 0 ? "bg-black" : "bg-primary"
-                  } rounded-full p-5`}
-                >
-                  <Image
-                    className="m-auto"
-                    src={
-                      data.id % 2 === 0
-                        ? "/assets/home/review/yellow-quote.svg"
-                        : "/assets/home/review/black-quote.svg"
-                    }
-                    alt="quote icon"
-                    width={20}
-                    height={20}
-                  />
-                </div>
-                <p className="text-sm">{data.review}</p>
-                <div className="border-t border-black w-full" />
-                <div className="flex flex-row gap-4 items-center">
-                  <Image
-                    className="rounded-full"
-                    src={data.profile}
-                    alt={`${data.name} photo`}
-                    width={90}
-                    height={90}
-                  />
-                  <div className="flex flex-col gap-1">
-                    <p className="font-bold text-xl">{data.name}</p>
-                    <p className="text-sm">{data.jobTitle}</p>
+          <Swiper
+            slidesPerView={3}
+            centeredSlides={true}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+              horizontalClass: "swiper-pagination-horizontal",
+              bulletClass: "swiper-pagination-bullet",
+              bulletActiveClass: "swiper-pagination-bullet-active",
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1.2,
+                spaceBetween: 10,
+                centeredSlides: true,
+              },
+              640: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+                centeredSlides: true,
+              },
+              1024: {
+                slidesPerView: 3.5,
+                spaceBetween: 40,
+                centeredSlides: true,
+              },
+            }}
+            modules={[Pagination, Autoplay]}
+            className="relative testimonial-swiper px-4 pb-12 w-full mx-auto"
+          >
+            {reviews.map((data) => (
+              <SwiperSlide key={data.id} className="py-14">
+                <div className="relative bg-white rounded-xl shadow-gray-300 shadow-lg flex flex-col gap-5 pt-10 pb-5 px-8 mt-24 mx-4 h-full">
+                  <div
+                    className={`absolute -top-10 left-8 ${
+                      data.id % 2 === 0 ? "bg-black" : "bg-primary"
+                    } rounded-full p-5 z-10`}
+                  >
                     <Image
-                      src="/assets/home/review/stars.svg"
-                      alt="stars icon"
-                      width={130}
-                      height={130}
+                      className="m-auto"
+                      src={
+                        data.id % 2 === 0
+                          ? "/assets/home/review/yellow-quote.svg"
+                          : "/assets/home/review/black-quote.svg"
+                      }
+                      alt="quote icon"
+                      width={20}
+                      height={20}
                     />
                   </div>
+                  <p className="text-sm">{data.review}</p>
+                  <div className="border-t border-black w-full" />
+                  <div className="flex flex-row gap-4 items-center">
+                    <Image
+                      className="rounded-full"
+                      src={data.profile}
+                      alt={`${data.name} photo`}
+                      width={90}
+                      height={90}
+                    />
+                    <div className="flex flex-col gap-1">
+                      <p className="font-bold text-xl">{data.name}</p>
+                      <p className="text-sm">{data.jobTitle}</p>
+                      <Image
+                        src="/assets/home/review/stars.svg"
+                        alt="stars icon"
+                        width={130}
+                        height={130}
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
 
       <div className="bg-primary flex justify-center py-10 my-24">

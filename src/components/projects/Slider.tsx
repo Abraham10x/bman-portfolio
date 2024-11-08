@@ -1,7 +1,13 @@
+"use client";
+import { FC } from "react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
 import Link from "next/link";
-import Image from "next/image";
 
-const Projects = () => {
+const Slider: FC = () => {
   const projects = [
     {
       id: 1,
@@ -62,29 +68,55 @@ const Projects = () => {
   ];
 
   return (
-    <div className="relative">
-      <Image
-        className="absolute -top-[3%] sm:-top-[8%] lg:-top-[25%] right-0 left-0 w-full -z-50"
-        alt="fancy image"
-        src="/assets/fancy/three-lines.svg"
-        width={20}
-        height={20}
-      />
-      <Image
-        className="absolute w-1/2 sm:w-auto top-[10%] sm:top-[30%] right-0 -z-50"
-        alt="fancy image"
-        src="/assets/fancy/big-dots.svg"
-        width={500}
-        height={500}
-      />
-      <div className="xl:container pt-10 sm:pt-32 px-5 sm:px-10 pb-8 mx-auto">
-        <h3 className="font-bold text-2xl lg:text-4xl">Projects</h3>
-        <div className="my-20 grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-5 lg:gap-20">
-          {projects.map((item) => (
+    <div>
+      <h3 className="font-semibold text-xl sm:text-2xl text-center sm:py-16">
+        view more projects
+      </h3>
+      <Swiper
+        slidesPerView={3}
+        centeredSlides={true}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+          horizontalClass: "swiper-pagination-horizontal",
+          bulletClass: "swiper-pagination-bullet",
+          bulletActiveClass: "swiper-pagination-bullet-active",
+        }}
+        breakpoints={{
+          320: {
+            slidesPerView: 1.2,
+            spaceBetween: 10,
+            centeredSlides: true,
+          },
+          640: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+            centeredSlides: true,
+          },
+          768: {
+            slidesPerView: 2.5,
+            spaceBetween: 30,
+            centeredSlides: true,
+          },
+          1024: {
+            slidesPerView: 3.5,
+            spaceBetween: 40,
+            centeredSlides: true,
+          },
+        }}
+        modules={[Pagination, Autoplay]}
+        className="relative testimonial-swiper px-4 pb-12 w-full mx-auto"
+      >
+        {projects.map((item) => (
+          <SwiperSlide key={item.id} className="py-14">
             <div
               key={item.id}
               style={{ backgroundImage: `url(${item.bg})` }}
-              className="flex flex-col items-center justify-end h-[28rem] lg:h-[31rem] bg-cover rounded-2xl shadow-yellow-200 shadow-lg pt-8 pb-32"
+              className="flex flex-col items-center justify-end h-[20rem] lg:h-[24rem] bg-cover rounded-2xl shadow-yellow-200 shadow-lg pt-8 pb-20 sm:pb-32"
             >
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-2 items-center">
@@ -100,11 +132,11 @@ const Projects = () => {
                 </Link>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };
 
-export default Projects;
+export default Slider;
