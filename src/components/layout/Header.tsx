@@ -2,9 +2,24 @@
 import { FC, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Header: FC = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: "/about", label: "About Me" },
+    { href: "/projects", label: "Projects" },
+    { href: "#projects", label: "Resumé" },
+    { href: "/contact", label: "Contact" },
+  ];
+
+  const isActive = (path: string) => {
+    if (path === "#projects") return false; // Don't mark hash links as active
+    return pathname === path;
+  };
+
   return (
     <div className="bg-[url('/assets/fancy/nav-gradient.svg')] bg-no-repeat bg-cover bg-center py-3 relative">
       <Image
@@ -55,34 +70,35 @@ const Header: FC = () => {
             }`}
             onClick={() => setOpen(false)}
           >
-            <li className="lg:ml-0 xl:ml-8 text-xl md:my-8 sm:my-0 my-7">
-              <Link legacyBehavior href="/about">
-                <a className="md:px-6 lg:px-3 hover:text-secondary duration-500 text-base lg:text-lg">
-                  About Me
-                </a>
-              </Link>
-            </li>
-            <li className="lg:ml-0 xl:ml-8 text-xl md:my-8 sm:my-0 my-7">
-              <Link legacyBehavior href="/projects">
-                <a className="md:px-6 lg:px-3 hover:text-secondary duration-500 text-base lg:text-lg">
-                  Projects
-                </a>
-              </Link>
-            </li>
-            <li className="lg:ml-0 xl:ml-8 text-xl md:my-8 sm:my-0 mb-7 mt-0">
-              <Link legacyBehavior href="#projects">
-                <a className="md:px-6 lg:px-3 hover:text-secondary duration-500 text-base lg:text-lg">
-                  Resumé
-                </a>
-              </Link>
-            </li>
-            <li className="lg:ml-0 xl:ml-8 text-xl md:my-8 sm:my-0 my-7">
-              <Link legacyBehavior href="/contact">
-                <a className="md:px-6 lg:px-3 hover:text-secondary duration-500 text-base lg:text-lg">
-                  Contact
-                </a>
-              </Link>
-            </li>
+            {navLinks.map((link) => (
+              <li
+                key={link.href}
+                className="lg:ml-0 xl:ml-8 text-xl md:my-8 sm:my-0 my-7"
+              >
+                <Link legacyBehavior href={link.href}>
+                  <div className="flex flex-col gap-1 cursor-pointer">
+                    <a
+                      className={`md:px-6 lg:px-3 hover:text-secondary duration-500 text-base lg:text-lg relative
+                        ${isActive(link.href) ? "font-bold" : ""}
+                      ${
+                        isActive(link.href)
+                          ? "after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-0.5 after:bg-secondary"
+                          : ""
+                      }`}
+                    >
+                      {link.label}
+                    </a>
+                    <div
+                      className={`${
+                        isActive(link.href)
+                          ? "border-2 border-primary rounded-xl"
+                          : ""
+                      }`}
+                    />
+                  </div>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
