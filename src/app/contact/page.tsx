@@ -13,10 +13,10 @@ const page = () => {
               Get In Touch
             </h1>
             <p className="text-base text-black">
-              Whether you’re looking to start a new project, discuss ideas, or
+              Whether you're looking to start a new project, discuss ideas, or
               just say hello, I'd love to connect. With a passion for impactful
               design and a commitment to collaboration, I'm here to help bring
-              your vision to life. Feel free to reach out—I’m excited to hear
+              your vision to life. Feel free to reach out—I'm excited to hear
               from you!
             </p>
           </div>
@@ -26,7 +26,7 @@ const page = () => {
               <div className="flex flex-col gap-3">
                 <h3 className="font-bold text-2xl">Contact Information</h3>
                 <p>
-                  Whether you’re looking to start a new project, discuss ideas,
+                  Whether you're looking to start a new project, discuss ideas,
                   or just say hello, I'd love to connect.
                 </p>
               </div>
