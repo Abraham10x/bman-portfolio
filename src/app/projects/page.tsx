@@ -64,7 +64,7 @@ const Projects = () => {
   return (
     <div className="relative">
       <Image
-        className="absolute -top-[3%] sm:-top-[8%] lg:-top-[25%] right-0 left-0 w-full -z-50"
+        className="absolute -top-[3%] sm:-top-[8%] lg:-top-[16%]  xl:-top-[25%] right-0 left-0 w-full -z-50"
         alt="fancy image"
         src="/assets/fancy/three-lines.svg"
         width={20}

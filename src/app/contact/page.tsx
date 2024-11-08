@@ -91,7 +91,7 @@ const page = () => {
                     rows={3}
                   />
                 </div>
-                <button className="w-full sm:w-1/2 lg:w-1/3 bg-primary hover:bg-yellow-200 hover:scale-110 transition delay-150 duration-300 ease-in-out font-bold px-8 sm:px-11 py-5 leading-7 text-lg sm:text-xl rounded-lg">
+                <button className="w-full sm:w-1/2 xl:w-1/3 bg-primary hover:bg-yellow-200 hover:scale-110 transition delay-150 duration-300 ease-in-out font-bold px-8 sm:px-11 py-5 leading-7 text-lg sm:text-xl rounded-lg">
                   Send Message
                 </button>
               </form>
@@ -102,7 +102,7 @@ const page = () => {
       </div>
       <div className="mt-40 relative">
         <Image
-          className="absolute bottom-[50%] sm:bottom-0 lg:-bottom-[50%] right-0 left-0 w-full -z-50"
+          className="absolute bottom-[50%] sm:bottom-0 lg:-bottom-[30%] xl:-bottom-[50%] right-0 left-0 w-full -z-50"
           alt="fancy image"
           src="/assets/fancy/three-lines.svg"
           width={20}
