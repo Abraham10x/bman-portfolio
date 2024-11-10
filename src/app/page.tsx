@@ -153,57 +153,54 @@ const Home = () => {
   const reviews = [
     {
       id: 1,
-      name: "Samson Samuels",
-      jobTitle: "Co-founder Hashtag Digital",
-      profile: "/assets/home/review/image/samson.png",
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-        enim ad minim veniam, quis nostrud exercitation`,
+      name: "Sundayson Palmer",
+      jobTitle: "Church Committee Lead",
+      profile: "/assets/home/review/image/sundayson-palmer.png",
+      review: `Plant the heavens assembly is a religious body that has 
+        been patronizing bman Designs and creativity. His designs has 
+        been able to align with our vision and elevate our events. 
+        Highly recommended!`,
     },
     {
       id: 2,
-      name: "Jennifer Obayuwana",
-      jobTitle: "Executive Director Polo Limited",
-      profile: "/assets/home/review/image/jenny.png",
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-        enim ad minim veniam, quis nostrud exercitation`,
+      name: "Samson Samuels",
+      jobTitle: "Co-founder Hashtag Digital",
+      profile: "/assets/home/review/image/samson-samuels.png",
+      review: `Kingsley AKA Bman is a man of exceptional talent, 
+        he knows his onions so well, and his works speaks volume. 
+        I give it to him! 💯`,
     },
     {
       id: 3,
-      name: "Akintade Bright",
-      jobTitle: "CEO Partycoo",
-      profile: "/assets/home/review/image/tade.png",
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-        enim ad minim veniam, quis nostrud exercitation`,
+      name: "Louis Ejiofor",
+      jobTitle: "CEO District Media Company",
+      profile: "/assets/home/review/image/louis-ejiofor.png",
+      review: `District Media Company is consistently impressed 
+        by Bman Montage Designs’ creativity and professionalism. 
+        Their designs perfectly capture our vision and elevate 
+        our brand. Highly recommended!`,
     },
     {
       id: 4,
-      name: "Akintade Bright",
-      jobTitle: "CEO Partycoo",
+      name: "ABosede Ikujuni",
+      jobTitle: "CEO BoMaI",
       profile: "/assets/home/review/image/tade.png",
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-        enim ad minim veniam, quis nostrud exercitation`,
+      review: `I’ve worked with Bman Kingsley over the years in the 
+        fashion industry and when it comes to premium graphic design 
+        he is a master at transforming marketing conceptual ideas 
+        into something significant & classy.
+`,
     },
     {
       id: 5,
-      name: "Jennifer Obayuwana",
-      jobTitle: "Executive Director Polo Limited",
-      profile: "/assets/home/review/image/jenny.png",
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-        enim ad minim veniam, quis nostrud exercitation`,
-    },
-    {
-      id: 6,
-      name: "Samson Samuels",
-      jobTitle: "Co-founder Hashtag Digital",
-      profile: "/assets/home/review/image/samson.png",
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-        enim ad minim veniam, quis nostrud exercitation`,
+      name: "Nneka Viola",
+      jobTitle: "CEO Nayka Collections",
+      profile: "/assets/home/review/image/nneka-viola.png",
+      review: `Working with Bman Montage has been a game-changer 
+        for our brand. Their team is highly skilled, creative, and 
+        always delivers designs that perfectly capture our vision. 
+        From logos to marketing materials, they consistently exceed 
+        expectations and provide exceptional value.`,
     },
   ];
 
@@ -227,16 +224,10 @@ const Home = () => {
                 experience.
               </p>
               <div className="flex sm:flex-row mt-4 gap-6">
-                <Link href="/resume.pdf" legacyBehavior>
-                  <a
-                    rel="noreferer noopener"
-                    target="_blank"
-                    type="application/pdf"
-                  >
-                    <button className="bg-primary hover:bg-yellow-200 hover:scale-110 transition delay-150 duration-300 ease-in-out font-bold px-8 sm:px-11 py-5 leading-7 text-lg sm:text-xl rounded-lg shadow-primary/80 shadow-lg">
-                      View Portfolio
-                    </button>
-                  </a>
+                <Link href="/projects" legacyBehavior>
+                  <button className="bg-primary hover:bg-yellow-200 hover:scale-110 transition delay-150 duration-300 ease-in-out font-bold px-8 sm:px-11 py-5 leading-7 text-lg sm:text-xl rounded-lg shadow-primary/80 shadow-lg">
+                    View Projects
+                  </button>
                 </Link>
               </div>
             </div>
@@ -445,7 +436,7 @@ const Home = () => {
           >
             {reviews.map((data) => (
               <SwiperSlide key={data.id} className="py-14">
-                <div className="relative bg-white rounded-xl shadow-gray-300 shadow-lg flex flex-col gap-5 pt-10 pb-5 px-8 mt-24 mx-4 h-full">
+                <div className="relative bg-white rounded-xl shadow-gray-300 shadow-lg flex flex-col gap-5 pt-10 pb-5 px-8 mt-24 mx-4 h-72">
                   <div
                     className={`absolute -top-10 left-8 ${
                       data.id % 2 === 0 ? "bg-black" : "bg-primary"
@@ -464,24 +455,26 @@ const Home = () => {
                     />
                   </div>
                   <p className="text-sm">{data.review}</p>
-                  <div className="border-t border-black w-full" />
-                  <div className="flex flex-row gap-4 items-center">
-                    <Image
-                      className="rounded-full"
-                      src={data.profile}
-                      alt={`${data.name} photo`}
-                      width={90}
-                      height={90}
-                    />
-                    <div className="flex flex-col gap-1">
-                      <p className="font-bold text-xl">{data.name}</p>
-                      <p className="text-sm">{data.jobTitle}</p>
+                  <div className="absolute bottom-6 flex flex-col gap-5">
+                    <div className="border-t border-black w-full" />
+                    <div className="flex flex-row gap-4 items-center">
                       <Image
-                        src="/assets/home/review/stars.svg"
-                        alt="stars icon"
-                        width={130}
-                        height={130}
+                        className="rounded-full"
+                        src={data.profile}
+                        alt={`${data.name} photo`}
+                        width={90}
+                        height={90}
                       />
+                      <div className="flex flex-col gap-1">
+                        <p className="font-bold text-xl">{data.name}</p>
+                        <p className="text-sm">{data.jobTitle}</p>
+                        <Image
+                          src="/assets/home/review/stars.svg"
+                          alt="stars icon"
+                          width={130}
+                          height={130}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -492,9 +485,11 @@ const Home = () => {
       </div>
 
       <div className="bg-primary flex justify-center py-10 my-24">
-        <button className="border-2 border-black hover:scale-110 transition delay-150 duration-300 ease-in-out font-bold px-8 sm:px-11 py-5 leading-7 text-lg sm:text-xl rounded-lg">
-          View Projects
-        </button>
+        <Link href="/projects" legacyBehavior>
+          <button className="border-2 border-black hover:scale-110 transition delay-150 duration-300 ease-in-out font-bold px-8 sm:px-11 py-5 leading-7 text-lg sm:text-xl rounded-lg">
+            View Projects
+          </button>
+        </Link>
       </div>
     </div>
   );

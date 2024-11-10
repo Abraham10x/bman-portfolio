@@ -11,12 +11,12 @@ const Header: FC = () => {
   const navLinks = [
     { href: "/about", label: "About Me" },
     { href: "/projects", label: "Projects" },
-    { href: "#projects", label: "Resumé" },
+    { href: "/resume.pdf", label: "Resumé" },
     { href: "/contact", label: "Contact" },
   ];
 
   const isActive = (path: string) => {
-    if (path === "#projects") return false; // Don't mark hash links as active
+    if (path === "/resume.pdf") return false; // Don't mark hash links as active
     return pathname === path;
   };
 
@@ -78,7 +78,7 @@ const Header: FC = () => {
                 <Link legacyBehavior href={link.href}>
                   <div className="flex flex-col gap-1 cursor-pointer">
                     <a
-                      className={`md:px-6 lg:px-3 hover:text-secondary duration-500 text-base lg:text-lg relative
+                      className={`md:px-6 lg:px-3 hover:font-semibold duration-500 text-base lg:text-lg relative
                         ${isActive(link.href) ? "font-bold" : ""}
                       ${
                         isActive(link.href)

@@ -29,7 +29,7 @@ const Footer: FC = () => {
               />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/ameh-abraham-2553951bb/"
+              href="https://www.linkedin.com/in/kingsleymbilitem?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               rel="noreferer noopener"
               target="_blank"
             >
