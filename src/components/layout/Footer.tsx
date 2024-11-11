@@ -19,16 +19,6 @@ const Footer: FC = () => {
           </div>
           <div className="flex flex-row space-x-4 text-black justify-start mt-8">
             <Link
-              href="https://twitter.com/amehabraham811/"
-              rel="noreferer noopener"
-              target="_blank"
-            >
-              <RiTwitterFill
-                size={50}
-                className="p-2 rounded-full hover:scale-110 hover:-translate-y-2 transition-all delay-150 duration-300 ease-in-out"
-              />
-            </Link>
-            <Link
               href="https://www.linkedin.com/in/kingsleymbilitem?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               rel="noreferer noopener"
               target="_blank"
@@ -38,17 +28,7 @@ const Footer: FC = () => {
                 className="p-2 rounded-full hover:scale-110 hover:-translate-y-2 transition-all delay-150 duration-300 ease-in-out"
               />
             </Link>
-            <Link
-              href="https://www.linkedin.com/in/ameh-abraham-2553951bb/"
-              rel="noreferer noopener"
-              target="_blank"
-            >
-              <RiInstagramFill
-                size={50}
-                className="p-2 rounded-full hover:scale-110 hover:-translate-y-2 transition-all delay-150 duration-300 ease-in-out"
-              />
-            </Link>
-            <Link href="mailto:amehabraham811@gmail.com">
+            <Link href="mailto:bmanmontage@gmail.com">
               <RiMailFill
                 size={50}
                 className="p-2 rounded-full hover:scale-110 hover:-translate-y-2 transition-all delay-150 duration-300 ease-in-out"

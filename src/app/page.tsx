@@ -425,6 +425,11 @@ const Home = () => {
                 spaceBetween: 20,
                 centeredSlides: true,
               },
+              768: {
+                slidesPerView: 2.5,
+                spaceBetween: 30,
+                centeredSlides: true,
+              },
               1024: {
                 slidesPerView: 3.5,
                 spaceBetween: 40,

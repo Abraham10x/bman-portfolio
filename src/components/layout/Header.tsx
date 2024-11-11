@@ -29,7 +29,7 @@ const Header: FC = () => {
         width={1500}
         height={1500}
       />
-      <div className="w-full top-0 left-0 bg-primary-light sticky sm:px-10 z-50 bg-opacity-100 lg:bg-opacity-[0.93]">
+      <div className="w-full top-0 left-0 sticky sm:px-10 z-50">
         <div className="md:flex items-center justify-between py-4 px-7 sm:px-0 xl:container mx-auto">
           <Link legacyBehavior href="/">
             <figure>
@@ -45,7 +45,7 @@ const Header: FC = () => {
 
           <div
             onClick={() => setOpen(!open)}
-            className="text-3xl absolute right-8 top-6 cursor-pointer lg:hidden"
+            className="text-3xl absolute right-8 top-8 cursor-pointer lg:hidden"
           >
             {open ? (
               <button className="header-nav-toggle off-nav-is-active mt-2">
