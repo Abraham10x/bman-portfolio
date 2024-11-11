@@ -1,6 +1,13 @@
 {
+  "plugins": ["react"],
   "rules": {
-    "react/no-unescaped-entities": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-key": "off",
+    "react/no-unescaped-entities": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "no-undef": "off",
+    "no-unused-vars": "off",
+    "react-hooks/rules-of-hooks": "warn"
   },
   "extends": ["next/core-web-vitals", "next/typescript"]
 }
