@@ -184,7 +184,7 @@ const Home = () => {
       id: 4,
       name: "ABosede Ikujuni",
       jobTitle: "CEO BoMaI",
-      profile: "/assets/home/review/image/tade.png",
+      profile: "/assets/home/review/image/bosede-ikujuni.png",
       review: `I’ve worked with Bman Kingsley over the years in the 
         fashion industry and when it comes to premium graphic design 
         he is a master at transforming marketing conceptual ideas 
