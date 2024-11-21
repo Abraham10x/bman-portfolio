@@ -202,6 +202,15 @@ const Home = () => {
         From logos to marketing materials, they consistently exceed 
         expectations and provide exceptional value.`,
     },
+    {
+      id: 6,
+      name: "Akintade Britto",
+      jobTitle: "Co-founder Hashtag Digital",
+      profile: "/assets/home/review/image/akintade-britto.png",
+      review: `Kingsley Osita Mbilitem is a man of exceptional talent, 
+        he knows his onions so well, and his works speaks volume. 
+        I give it to him!`,
+    },
   ];
 
   return (
@@ -426,13 +435,13 @@ const Home = () => {
                 centeredSlides: true,
               },
               768: {
-                slidesPerView: 2.5,
+                slidesPerView: 1.8,
                 spaceBetween: 30,
                 centeredSlides: true,
               },
               1024: {
                 slidesPerView: 3.5,
-                spaceBetween: 40,
+                spaceBetween: 10,
                 centeredSlides: true,
               },
             }}
@@ -441,7 +450,7 @@ const Home = () => {
           >
             {reviews.map((data) => (
               <SwiperSlide key={data.id} className="py-14">
-                <div className="relative bg-white rounded-xl shadow-gray-300 shadow-lg flex flex-col gap-5 pt-10 pb-5 px-8 mt-24 mx-4 h-72">
+                <div className="relative bg-white rounded-xl shadow-gray-300 shadow-lg flex flex-col gap-5 pt-10 pb-5 px-5 sm:px-8 mt-8 sm:mt-5 lg:mt-24 sm:mx-4 h-[22rem] xl:h-72">
                   <div
                     className={`absolute -top-10 left-8 ${
                       data.id % 2 === 0 ? "bg-black" : "bg-primary"
@@ -460,7 +469,7 @@ const Home = () => {
                     />
                   </div>
                   <p className="text-sm">{data.review}</p>
-                  <div className="absolute bottom-6 flex flex-col gap-5">
+                  <div className="absolute bottom-6 flex flex-col gap-5 w-[87%]">
                     <div className="border-t border-black w-full" />
                     <div className="flex flex-row gap-4 items-center">
                       <Image
@@ -471,7 +480,9 @@ const Home = () => {
                         height={90}
                       />
                       <div className="flex flex-col gap-1">
-                        <p className="font-bold text-xl">{data.name}</p>
+                        <p className="font-bold text-lg sm:text-xl">
+                          {data.name}
+                        </p>
                         <p className="text-sm">{data.jobTitle}</p>
                         <Image
                           src="/assets/home/review/stars.svg"

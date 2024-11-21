@@ -98,7 +98,7 @@ const Slider: FC = () => {
             centeredSlides: true,
           },
           768: {
-            slidesPerView: 2.5,
+            slidesPerView: 1.8,
             spaceBetween: 30,
             centeredSlides: true,
           },
@@ -116,7 +116,7 @@ const Slider: FC = () => {
             <div
               key={item.id}
               style={{ backgroundImage: `url(${item.bg})` }}
-              className="flex flex-col items-center justify-end h-[20rem] lg:h-[24rem] bg-cover rounded-2xl shadow-yellow-200 shadow-lg pt-8 pb-20 sm:pb-32"
+              className="flex flex-col items-center justify-end h-[20rem] lg:h-[24rem] bg-cover rounded-2xl shadow-yellow-200 shadow-lg pt-8 pb-20 sm:pb-24 lg:pb-32"
             >
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-2 items-center">

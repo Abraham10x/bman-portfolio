@@ -66,7 +66,7 @@ const Header: FC = () => {
 
           <ul
             className={`lg:flex lg:items-center lg:pb-0 pb-12 absolute lg:static lg:z-auto z-[2] left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in ${
-              open ? "top-[4.8rem] sm:top-[5rem] bg-white" : "top-[-50rem]"
+              open ? "top-[4.8rem] sm:top-[6rem] bg-white" : "top-[-50rem]"
             }`}
             onClick={() => setOpen(false)}
           >

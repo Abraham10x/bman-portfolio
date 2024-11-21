@@ -1,6 +1,7 @@
 import Slider from "@/components/projects/Slider";
 import Title from "@/components/projects/Title";
 import Image from "next/image";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -30,9 +31,16 @@ const page = () => {
             height={1000}
           />
           <div className="flex justify-center py-10 my-24">
-            <button className="bg-primary hover:scale-110 transition delay-150 duration-300 ease-in-out font-bold px-8 sm:px-20 py-5 leading-7 text-lg sm:text-xl rounded-lg">
-              See more
-            </button>
+            <Link
+              href="https://www.behance.net/gallery/211193345/Branding-marketing-graphic-design"
+              legacyBehavior
+            >
+              <a target="_blank" rel="noopener noreferrer">
+                <button className="bg-primary hover:scale-110 transition delay-150 duration-300 ease-in-out font-bold px-8 sm:px-20 py-5 leading-7 text-lg sm:text-xl rounded-lg">
+                  See more
+                </button>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
