@@ -234,7 +234,13 @@ const Home = () => {
               </p>
               <div className="flex sm:flex-row mt-4 gap-6">
                 <Link href="/projects" legacyBehavior>
-                  <button className="bg-primary hover:bg-yellow-200 hover:scale-110 transition delay-150 duration-300 ease-in-out font-bold px-8 sm:px-11 py-5 leading-7 text-lg sm:text-xl rounded-lg shadow-primary/80 shadow-lg">
+                  <button className="bg-primary hover:bg-yellow-200 hover:scale-110 transition delay-150 duration-300 ease-in-out font-bold px-8 sm:px-11 py-5 leading-7 text-lg sm:text-xl rounded-lg shadow-primary/80 shadow-lg relative">
+                    <div className="absolute -top-1 -right-1">
+                      <span className="relative flex h-5 w-5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-5 w-5 bg-black"></span>
+                      </span>
+                    </div>
                     View Projects
                   </button>
                 </Link>
@@ -450,7 +456,7 @@ const Home = () => {
           >
             {reviews.map((data) => (
               <SwiperSlide key={data.id} className="py-14">
-                <div className="relative bg-white rounded-xl shadow-gray-300 shadow-lg flex flex-col gap-5 pt-10 pb-5 px-5 sm:px-8 mt-8 sm:mt-5 lg:mt-24 sm:mx-4 h-[22rem] xl:h-72">
+                <div className="relative bg-white rounded-xl shadow-gray-300 shadow-lg flex flex-col gap-5 pt-10 pb-5 px-5 sm:px-8 mt-8 sm:mt-5 lg:mt-24 sm:mx-4 h-[22rem] lg:h-[20rem]">
                   <div
                     className={`absolute -top-10 left-8 ${
                       data.id % 2 === 0 ? "bg-black" : "bg-primary"

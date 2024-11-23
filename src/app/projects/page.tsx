@@ -6,7 +6,7 @@ const Projects = () => {
     {
       id: 1,
       title: "Hashtag Digital",
-      body: "ebsite UI/UX tRedesign",
+      body: "ebsite UI/UX Redesign",
       bg: "/assets/projects/hashtag.png",
       link: "/projects/hashtag",
     },
